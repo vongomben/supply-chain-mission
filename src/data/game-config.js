@@ -1,13 +1,10 @@
 /**
  * Supply Chain Mission — contenuti didattici.
- * Il motore legge questo file. lockerCode è definito una sola volta.
+ * Il motore legge questo file. Fine partita: stelle 1–5, niente codice lucchetto.
  */
-
-const lockerCode = "5162"; // PROVVISORIO — Davide lo verifica nel master Excel
 
 export const gameConfig = {
   id: "supply-chain-mission",
-  lockerCode,
   meta: {
     slug: "supply-chain-mission",
     titolo: "Supply Chain Mission",
@@ -32,7 +29,7 @@ export const gameConfig = {
         ["Scadenza", "Consegna entro 30 giorni dall'ordine"],
         [
           "Regola",
-          "Puoi riprovare ogni prova. Con al massimo un errore al primo tentativo, la spedizione parte.",
+          "Puoi riprovare ogni prova. Il punteggio finale è da 1 a 5 stelle, in base agli errori al primo tentativo.",
         ],
       ],
     },

@@ -18,7 +18,7 @@ function dettaglioPunteggio(errori, totale) {
 }
 
 /**
- * Schermata esito: positivo mostra il lucchetto, negativo no.
+ * Schermata esito: stelle 1–5 e messaggio positivo/negativo. Niente lucchetto.
  * @param {HTMLElement} parent
  * @param {{ config: object, hintsUsed: Record<string, boolean>, errors: number, mistakeIds?: Record<string, boolean>, onRestart: () => void }} props
  */
@@ -45,17 +45,6 @@ export function mountVittoriaScreen(
   const testo = esito?.testo || vittoria.testo;
   if (testo) {
     section.append(el("p", { class: "victory__text" }, testo));
-  }
-
-  if (ok && config.lockerCode) {
-    section.append(
-      el(
-        "p",
-        { class: "locker", "aria-label": `${COPY.codiceLucchetto} ${config.lockerCode}` },
-        el("span", { class: "locker__label" }, COPY.codiceLucchetto),
-        el("strong", { class: "locker__code" }, config.lockerCode),
-      ),
-    );
   }
 
   const competenze = vittoria.competenzeEvidenziate ?? [];

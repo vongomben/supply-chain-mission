@@ -26,4 +26,4 @@ Pannello facilitatore: `?facilitatore=1`.
 
 Tutto il testo didattico sta in `src/data/game-config.js`.
 
-Il codice lucchetto (`5162`) è **provvisorio** e vive in un'unica costante `lockerCode`.
+A fine partita: da 1 a 5 stelle in base alle prove con almeno un errore (0 → 5, 1 → 4, 2 → 3, 3–4 → 2, 5–6 → 1). Niente codice lucchetto.

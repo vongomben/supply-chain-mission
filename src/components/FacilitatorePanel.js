@@ -48,17 +48,6 @@ export function mountFacilitatorePanel(parent, { config }) {
   }
   panel.append(list);
 
-  const codice = config.lockerCode || config.codiceFinale?.valore;
-  if (codice) {
-    panel.append(
-      el(
-        "p",
-        { class: "facilitatore__code" },
-        `${COPY.codiceLucchetto}: ${codice}${config.codiceFinale?.formatoAtteso ? ` (${config.codiceFinale.formatoAtteso})` : ""}`,
-      ),
-    );
-  }
-
   function sync() {
     panel.hidden = !open;
     toggle.textContent = open ? COPY.facilitatoreChiudi : COPY.facilitatore;
